@@ -14,6 +14,7 @@ const Label = styled.label`
   display: block;
   text-align: left;
   font-size: small;
+  visibility: ${props => (props.hide ? "visible" : "hidden")};
 `;
 
 const RawInput = ({ value, placeholder, onChange, type }) => {
@@ -27,16 +28,18 @@ const RawInput = ({ value, placeholder, onChange, type }) => {
   );
 };
 
-const LabeledInput = ({ value, label, placeholder, onChange, type }) => {
+const LabeledInput = ({ value, label, onChange, type }) => {
   const id = Math.random();
   return (
     <Padder>
-      <Label for={id}>{label}</Label>
+      <Label for={id} hide={!!value}>
+        {label}
+      </Label>
       <RawInput
         type={type}
         id={id}
         value={value}
-        placeholder={placeholder}
+        placeholder={label}
         onChange={onChange}
       />
     </Padder>

@@ -21,14 +21,12 @@ const DrinksForm = ({
         type="number"
         value={volume}
         label="Drink Volume (ml)"
-        placeholder="425"
         onChange={handleVolumeUpdate}
       />
       <Input
         type="number"
         value={percentage}
         label="Alcahol %"
-        placeholder="4.7"
         onChange={handlePercentageUpdate}
       />
     </div>

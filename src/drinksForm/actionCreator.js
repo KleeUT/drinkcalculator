@@ -10,10 +10,12 @@ export const updateVolume = (percentage, volume) => {
   };
 };
 export const updatePercentage = (percentage, volume) => {
+  const roundedPercent =
+    percentage > 100 ? 100 : percentage < 0 ? 0 : percentage;
   return {
     type: actionTypes.updatePercentage,
-    percentage: percentage,
-    drinks: calculateStandardDrinks(volume, percentage)
+    percentage: roundedPercent,
+    drinks: calculateStandardDrinks(volume, roundedPercent)
   };
 };
 

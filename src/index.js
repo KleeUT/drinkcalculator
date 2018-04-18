@@ -7,8 +7,10 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import { loadState, saveState } from "./util/LocalStorageStatePersister";
 import reducers from "./reducers";
+
+const previousState = loadState();
 const appReducer = combineReducers(reducers);
-const store = createStore(appReducer);
+const store = createStore(appReducer, previousState);
 store.subscribe(() => {
   saveState(store.getState());
 });

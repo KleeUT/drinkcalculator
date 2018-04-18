@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { updateVolume, updatePercentage } from "./actionCreator";
 
 import { Input } from "../components";
+import VolumeEntry from "./VolumeEntry";
 const DrinksForm = ({
   volume,
   volumeUpdated,
@@ -17,12 +18,8 @@ const DrinksForm = ({
   };
   return (
     <div>
-      <Input
-        type="number"
-        value={volume}
-        label="Drink Volume (ml)"
-        onChange={handleVolumeUpdate}
-      />
+      <VolumeEntry volume={volume} volumeUpdated={handleVolumeUpdate} />
+
       <Input
         type="number"
         value={percentage}

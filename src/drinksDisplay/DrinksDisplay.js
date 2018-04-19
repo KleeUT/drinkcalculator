@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Display = styled.div`
   font-size: 6rem;
+  color: #751619;
 `;
 const DrinksDisplay = ({ drinks }) => {
   return (

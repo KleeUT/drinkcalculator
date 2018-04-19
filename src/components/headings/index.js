@@ -8,6 +8,7 @@ const H1 = styled.h1`
   @media (max-width: 60rem) {
     font-size: x-large;
   }
+  text-align: center;
 `;
 
 export { H1 };

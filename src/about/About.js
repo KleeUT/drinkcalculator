@@ -5,6 +5,7 @@ const Copy = styled.p`
 `;
 
 const LinksList = styled.ul`
+  font-size: small;
   list-style: none;
 `;
 
@@ -25,17 +26,15 @@ export default () => (
       it's Volume, in litres, x Percentage x 0.789. I don't know who came up
       with that magic number or how, but that is what is/was there.
     </Copy>
-    <Copy>
-      Have fun, stay safe, drink responsibly, and all that jazz.
-      <LinksList>
-        <li>
-          <Link href="https://kleeut.com/">Klee Thomas</Link>
-        </li>
-        <li>
-          <Link href="https://github.com/KleeUT/">GitHub</Link>
-        </li>
-      </LinksList>
-    </Copy>
+    <Copy>Have fun, stay safe, drink responsibly, and all that jazz.</Copy>
+    <LinksList>
+      <li>
+        <Link href="https://kleeut.com/">Klee Thomas</Link>
+      </li>
+      <li>
+        <Link href="https://github.com/KleeUT/">GitHub</Link>
+      </li>
+    </LinksList>
   </div>
 );
 
